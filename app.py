@@ -10,12 +10,13 @@ def hello():
     return "Hello World ... again!"
 
 
-if __name__ == "__main__":
-    app.run(host=os.getenv("IP", "127.0.0.1"),
-            port=os.getenv("PORT", "5000"),
-            debug=True)
+# LOCAL
+#if __name__ == "__main__":
+    #app.run(host=os.getenv("IP", "127.0.0.1"),
+            #port=os.getenv("PORT", "5000"),
+            #debug=True)
 
 # HEROKU
-#app.run(host=os.getenv("IP", "0.0.0.0"),
-        #port=os.getenv("PORT", "5000"),
-        #debug=False)
+app.run(host=os.getenv("IP", "0.0.0.0"),
+        port=os.getenv("PORT", "5000"),
+        debug=True)
