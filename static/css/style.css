@@ -1,0 +1,92 @@
+.btn-sm {
+    height: 24px;
+    width: 60px;
+    line-height: 24px;
+    margin: 0 5px;
+    padding: 0 0.5em;
+}
+
+/*----- custom color overrides -----*/
+.datepicker-done,
+.dropdown-content li>a,
+.dropdown-content li>span,
+.datepicker-table td.is-today {
+    color: #9c27b0;
+}
+
+.datepicker-done:hover {
+    background-color: #f3e5f5;
+}
+
+.datepicker-cancel,
+i.icon-red {
+    color: #f44336;
+}
+
+.datepicker-clear:hover,
+.datepicker-cancel:hover {
+    background-color: #ffebee;
+}
+
+.datepicker-table td.is-selected,
+.datepicker-date-display {
+    background-color: #9c27b0;
+    color: white;
+}
+
+.datepicker-table td.is-today {
+    border: 1px solid #9c27b0;
+    border-radius: 50%;
+}
+
+td[aria-selected="false"]:hover,
+.month-prev:hover,
+.month-next:hover,
+input.select-dropdown.dropdown-trigger:hover {
+    background-color: #f3e5f5;
+}
+
+input[type=checkbox]:checked:not(:disabled)~.lever:active::before,
+input[type=checkbox]:checked:not(:disabled).tabbed:focus~.lever::before {
+    background-color: rgba(154, 38, 166, 0.15);
+}
+
+input.valid:not([type]),
+input.valid:not([type]):focus,
+input.valid[type=text]:not(.browser-default),
+input.valid[type=text]:not(.browser-default):focus,
+input.valid[type=password]:not(.browser-default),
+input.valid[type=password]:not(.browser-default):focus,
+input.valid[type=email]:not(.browser-default),
+input.valid[type=email]:not(.browser-default):focus,
+input.valid[type=url]:not(.browser-default),
+input.valid[type=url]:not(.browser-default):focus,
+input.valid[type=time]:not(.browser-default),
+input.valid[type=time]:not(.browser-default):focus,
+input.valid[type=date]:not(.browser-default),
+input.valid[type=date]:not(.browser-default):focus,
+input.valid[type=datetime]:not(.browser-default),
+input.valid[type=datetime]:not(.browser-default):focus,
+input.valid[type=datetime-local]:not(.browser-default),
+input.valid[type=datetime-local]:not(.browser-default):focus,
+input.valid[type=tel]:not(.browser-default),
+input.valid[type=tel]:not(.browser-default):focus,
+input.valid[type=number]:not(.browser-default),
+input.valid[type=number]:not(.browser-default):focus,
+input.valid[type=search]:not(.browser-default),
+input.valid[type=search]:not(.browser-default):focus,
+textarea.materialize-textarea.valid,
+textarea.materialize-textarea.valid:focus,
+textarea.materialize-textarea:focus:not([readonly]),
+.select-wrapper.valid>input.select-dropdown {
+    border-bottom: 1px solid #9c27b0;
+    box-shadow: 0 1px 0 0 #9c27b0;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #ba68c8;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #e1bee7;
+}

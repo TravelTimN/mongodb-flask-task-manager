@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Add Tasks</h3>
+<div class="row">
+    <form action="{{ url_for('insert_task') }}" method="POST" class="col s12">
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">poll</i>
+                <select name="category_name" id="category_name">
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in categories %}
+                    <option value="{{category.category_name}}">{{category.category_name}}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_name">Task Category</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input type="text" name="task_name" id="task_name" class="validate" autocomplete="off">
+                <label for="task_name">Task Name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                <textarea name="task_description" id="task_description" class="materialize-textarea" autocomplete="off"></textarea>
+                <label for="task_description">Task Description</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">today</i>
+                <input type="text" name="due_date" id="due_date" class="datepicker" autocomplete="off">
+                <label for="due_date">Due Date</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="switch">
+                <label>
+                    <input type="checkbox" name="is_urgent" id="is_urgent">
+                    <span class="lever"></span>
+                    URGENT!
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn waves-effect waves-light purple" type="submit" name="action">Add Task
+                <i class="material-icons right">playlist_add</i>
+            </button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}
